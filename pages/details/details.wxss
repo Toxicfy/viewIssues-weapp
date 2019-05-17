@@ -1,0 +1,29 @@
+/**基础风格样式**/
+@import '/towxml/style/main.wxss';
+@import '/towxml/style/theme/light.wxss';
+
+/**主题配色（浅色样式）**/
+@import '/towxml/style/theme/dark.wxss';
+
+/**主题配色（深色样式）**/
+
+.article-title {
+  height: 62vw;
+  background: url("https://cdn.magdeleine.co/wp-content/uploads/2019/04/dark-dirt-road-with-sign-1400x934.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
+.margin-top {
+  margin-top: 12vw;
+}
+
+.icon-back {
+  background: rgba(0, 0, 0, 0.15);
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}

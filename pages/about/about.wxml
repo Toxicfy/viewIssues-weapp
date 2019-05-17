@@ -1,0 +1,64 @@
+<!-- 顶部 -->
+<view class="header-image" style="background-image:url({{coverImage}});"></view>
+
+<!-- 个人信息 -->
+<view class="user-card padding bg-white shadow-lg">
+  <!-- 用户概要 -->
+  <view class="user-info-container">
+    <view class="user-info-avatar" style="background-image:url({{userInfo.avatar_url}});"></view>
+    <view class="user-info-text">
+      <view class="user-info-name">{{userInfo.name}}</view>
+      <view class="user-info-location">{{userInfo.location}}</view>
+    </view>
+  </view>
+  <!-- 用户数据统计 -->
+  <view class="user-statistics">
+    <view class="item">
+      <view class='title'>{{userInfo.public_repos}}</view>
+      <view class='desc'>Repos</view>
+    </view>
+    <view class="item">
+      <view class='title'>{{userInfo.followers}}</view>
+      <view class='desc'>Followers</view>
+    </view>
+    <view class="item">
+      <view class='title'>{{userInfo.following}}</view>
+      <view class='desc'>Following</view>
+    </view>
+  </view>
+</view>
+
+<!-- 最活跃的关注人列表 -->
+<view class="user-activity">
+  <view class="user-attention">
+    <!-- Title -->
+    <text class="attention-title">Attentions</text>
+    <text class="attention-sub-title">(Recent active)</text>
+
+    <view class="attention-container">
+      <!-- 图片 -->
+      <view wx:for="{{attentionList}}" class="attention-item" wx:key='index'>
+        <view style="background-image: url({{item.avatar_url}})" class="item-container"></view>
+        <!-- 文本信息 -->
+        <view class='attention-details'>
+          <view class='name'>{{item.display_login}}</view>
+          <view class='times'>
+            <text class='number'>{{item.times}}</text> Events</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!-- Github chart -->
+<view class='user-chart'>
+  <view class='title-container'>
+    <view class='chart-title'>Contribution </view>
+    <view class='chart-sub-title'> ({{chart.year}})</view>
+  </view>
+
+  <view class='chart-container'>
+    <view class='chart' style='background-image: url("{{chart.url}}")'></view>
+  </view>
+</view>

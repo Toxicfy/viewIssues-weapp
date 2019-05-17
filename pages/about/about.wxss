@@ -1,0 +1,178 @@
+page {
+  background: #fff;
+}
+
+/* 头部背景部分 */
+
+.header-image {
+  height: 30vh;
+  background-size: cover;
+}
+
+
+/*  用户卡片 */
+.user-card {
+  margin: -7vh 5vw 0;
+  border-radius: 4vw;
+  height: 35vw;
+}
+
+.user-info-container {
+  display: flex;
+}
+
+.user-info-container .user-info-avatar {
+  min-width: 22vw;
+  height: 22vw;
+  background-size: cover;
+  border-radius: 50%;
+  margin: -5vh 5vw 1vh;
+}
+
+.user-info-text .user-info-location, .user-info-text .user-info-name {
+  letter-spacing: 2rpx;
+}
+
+.user-info-text .user-info-name {
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.user-info-text .user-info-location {
+  font-size: 25rpx;
+}
+
+.user-statistics {
+  display: flex;
+}
+
+.user-statistics .item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  margin: 2vw;
+  height: 6vh;
+  border-radius: 2vw;
+}
+
+.user-statistics .item .title {
+  color: #333;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.user-statistics .item .desc {
+  color: #7f7f7f;
+  font-size: 26rpx;
+}
+
+/* 活跃的关注人部分 */
+
+.user-activity {
+  margin: 3vh 5vw;
+}
+
+.user-activity .user-attention .attention-title {
+  font-size: 36rpx;
+  color: #666;
+  font-weight: bold;
+  line-height: 6vh;
+  height: 6vh;
+}
+
+.user-activity .user-attention .attention-sub-title {
+  margin-left: 20rpx;
+  color: #666;
+  font-size: 20rpx;
+}
+
+.user-activity .user-attention .attention-container {
+  display: flex;
+  height: 20vh;
+  overflow: scroll;
+}
+
+.user-activity .attention-item {
+  min-width: 24vw;
+  position: relative;
+  flex-grow: 1;
+  margin-right: 4vw;
+}
+
+.user-activity .attention-item:last-child {
+  margin-right: 0;
+}
+
+.user-activity .attention-item .item-container {
+  border-radius: 2vw;
+  box-shadow: 0 0 5rpx rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.user-activity .attention-container .attention-item .attention-details {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 2vw;
+  width: 100%;
+  height: 100%;
+  color: rgb(230, 230, 230);
+  font-size: 26rpx;
+}
+
+.attention-container .attention-item .attention-details  .name {
+  margin: 11.5vh 0 1vh 1vw;
+}
+
+.attention-container .attention-item .attention-details .times {
+  font-size: 20rpx;
+  margin-left: 1vw;
+}
+
+.attention-container .attention-item .attention-details .times .number {
+  color: floralwhite;
+  margin-right: 0.8vw;
+  font-size: 38rpx;
+  font-weight: bold;
+}
+
+/* 图表信息 */
+
+.user-chart {
+  margin: 2vh 5vw;
+}
+
+.title-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.user-chart .chart-title {
+  font-size: 36rpx;
+  color: #666;
+  font-weight: bold;
+  line-height: 6vh;
+  height: 6vh;
+}
+
+.user-chart .chart-sub-title {
+  margin-left: 20rpx;
+  color: #666;
+  font-size: 20rpx;
+}
+
+.user-chart .chart-container {
+  overflow: scroll;
+}
+
+.user-chart .chart-container .chart {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 175.5vw;
+  height: 26vw;
+}

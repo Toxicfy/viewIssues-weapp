@@ -1,0 +1,52 @@
+Page {
+  background: #fff;
+}
+
+/* header */
+
+.header {
+  background: #ede1d9;
+  text-align: center;
+}
+
+.header .title {
+  font-size: 34rpx;
+}
+
+/* 工具条 */
+
+.toolbar {
+  display: flex;
+  height: 20vh;
+  padding: 3vw 0 0 5vw;
+  align-items: center;
+  flex-direction: column;
+}
+
+.toolbar .avatar {
+  width: 20vw;
+  height: 20vw;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.toolbar .description {
+  margin-top: 3vh;
+  font-size: 26rpx;
+}
+
+/* 文章部分 */
+
+.article-container .cu-item .content {
+  box-shadow: 3rpx 3rpx 18rpx rgba(0, 0, 0, 0.4);
+}
+
+.article-container .cu-item .content .time .state {
+  margin-left: 5rpx;
+  text-decoration: underline;
+}
+
+.article-container .article-title {
+  width: 100%;
+  font-weight: 700;
+}

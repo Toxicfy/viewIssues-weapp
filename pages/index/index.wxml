@@ -1,0 +1,52 @@
+<!-- header -->
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <!-- <view class="header" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;)">
+    <view class='title' style='height: {{CustomBar - StatusBar}}px; line-height: {{CustomBar - StatusBar}}px'>
+      主页
+    </view>
+  </view> -->
+</view>
+<!--  -->
+<view class="toolbar">
+  <!-- avatar -->
+  <view class='avatar' style='background-image:url({{userInfo.avatar_url}})'></view>
+  <!-- description -->
+  <view class="description">{{userInfo.bio}}</view>
+</view>
+<!-- 文章列表 -->
+<view class="article-container">
+  <view class="cu-timeline" wx:for="{{articleInfo}}" wx:key="{{index}}">
+    <view class="cu-time" wx:if="{{(item.created_at.Year !== articleInfo[index - 1].created_at.Year) || index === 0}}">
+      {{item.created_at.Year}}
+    </view>
+    <view class="cu-item">
+      <view class='content'>
+        <!-- 时间 -->
+        <view class="time">
+          <text class='icon-calendar'></text>
+          <text class='text-sm' style='margin-left:5rpx'>{{item.created_at.Day}}</text>
+          <text style='color: #858585; margin:0 0.3rem;'> | </text>
+          <text class='icon-creative'></text>
+          <text class='state text-sm'>{{item.state}}</text>
+        </view>
+        <!-- 标题 -->
+        <view class='text-cut padding-right margin-bottom margin-top article-title'>
+         
+          <text bindtap="viewDetail" data-number='{{item.number}}'> {{item.title}}</text>
+        </view>
+        <!-- 标签  -->
+        <view class="label">
+          <!-- label -->
+          <view 
+              class="cu-capsule radius" 
+              wx:for="{{item.labels}}" 
+              wx:for-index="i" 
+              wx:for-item="ele" 
+              wx:key="{{i}}">
+            <view class="cu-tag" style='background: #{{ele.color}};color: #fff;'>{{ele.name}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

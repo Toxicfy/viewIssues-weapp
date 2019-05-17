@@ -1,0 +1,35 @@
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text>
+    </navigator>
+  </view>
+</view>
+
+
+<view class='article' style='margin-top: -{{CustomBar}}px'>
+
+  <!-- 标题 -->
+  <view class='article-title bg-img bg-mask flex align-center'>
+
+
+    <view class="padding-xl text-white">
+      <view class="padding-xs text-xxl text-bold margin-top">
+        {{articleTitle}}
+      </view>
+      <view class="padding-xs">
+        共计 {{articleNumber}} 字，预计需要阅读 {{articleReadTime}} 分钟
+      </view>
+    </view>
+  </view>
+
+
+
+
+  <!-- 主体 -->
+  <view class='article-body'>
+    <import src="/towxml/entry.wxml" />
+    <template is="entry" data="{{...article}}" />
+  </view>
+
+</view>

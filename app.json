@@ -1,0 +1,39 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/details/details",
+        "pages/about/about"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "custom": false,
+        "color": "#aaa",
+        "selectedColor": "#39b54a",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "Trending",
+                "iconPath": "./images/shujukanban.png",
+                "selectedIconPath": "./images/shujukanban-2.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "home",
+                "iconPath": "./images/liutongchaxun.png",
+                "selectedIconPath": "./images/liutongchaxun-2.png"
+            },
+            {
+                "pagePath": "pages/about/about",
+                "text": "About",
+                "iconPath": "./images/gerencanshu.png",
+                "selectedIconPath": "./images/gerencanshu-2.png"
+            }
+        ]
+    }
+}
