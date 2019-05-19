@@ -1,11 +1,5 @@
 <!-- header -->
-<view class="cu-custom" style="height:{{CustomBar}}px;">
-  <!-- <view class="header" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;)">
-    <view class='title' style='height: {{CustomBar - StatusBar}}px; line-height: {{CustomBar - StatusBar}}px'>
-      主页
-    </view>
-  </view> -->
-</view>
+<view class="cu-custom" style="height:{{CustomBar}}px;"></view>
 <!--  -->
 <view class="toolbar">
   <!-- avatar -->
