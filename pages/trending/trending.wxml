@@ -1,2 +1,4 @@
-<!--pages/trending/trending.wxml-->
-<text>pages/trending/trending.wxml</text>
+<!--  -->
+<view class="cu-custom" style="height:{{CustomBar}}px;"></view>
+
+<text> 🚗测试 </text>
