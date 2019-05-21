@@ -1,4 +1,4 @@
-<!--  -->
+<!-- header -->
 <view class="cu-custom" style="height:{{CustomBar}}px;"></view>
 
-<text> 🚗测试 </text>
+<v-music album_title="{{musicData.album_title}}" author="{{musicData.author}}" img="{{musicData.pic_big}}"/>

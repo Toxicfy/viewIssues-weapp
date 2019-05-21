@@ -1,0 +1,13 @@
+<view class='container'>
+
+  <view class='bgContainer'>
+    <!-- <image class='tag' src='{{tagSrc}}'></image> -->
+   <!-- style='background: url({{bgSrc}})' -->
+    <image class = 'bg' src='{{bgSrc}}'></image>
+    <image class='play' src='{{playSrc}}'></image>
+  </view>
+  
+
+  <text>{{author}}</text>
+  <text>{{album_title}}</text>
+</view>
