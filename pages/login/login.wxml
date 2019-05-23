@@ -1,0 +1,20 @@
+<!-- header -->
+<view class="cu-custom" style="height:{{CustomBar}}px;"></view>
+
+<!-- input -->
+<view class='login-container'>
+  <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4250885442,2652050609&fm=26&gp=0.jpg'></image>
+  <form>
+    <view class="cu-form-group">
+      <text class='icon-people text-brown'></text>
+      <input placeholder="请输入用户名" class='radius' name='username'></input>
+    </view>
+
+    <view class="cu-form-group">
+      <text class='icon-lock text-brown'></text>
+      <input placeholder="请输入密码" class='radius' name='password'></input>
+    </view>
+  </form>
+
+  <button class="login-btn" role="button" aria-label="" aria-disabled="false">登 录</button>
+</view>

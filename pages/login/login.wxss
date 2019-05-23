@@ -1,0 +1,39 @@
+/* pages/login/login.wxss */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 0 10vw;
+  padding: 20rpx;
+  box-shadow: 0 8px 12px #ebedf0;
+}
+
+.login-container image{
+  width: 240rpx;
+  height: 180rpx;
+}
+
+.login-container form {
+  width: 80vw;
+  margin: 30rpx 0 40rpx;
+  padding: 15rpx;
+}
+
+.login-btn {
+  width: 69vw;
+  background: #77af9c;
+  color: #fff;
+  border-radius: 52rpx;
+  height:72rpx;
+  line-height:72rpx;
+  margin-bottom: 20rpx;
+}
+
+.cu-form-group text{
+  display: inline-block;
+  height: 50rpx;
+  margin-right: 15rpx;
+}
