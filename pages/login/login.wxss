@@ -6,7 +6,7 @@
   align-items: center;
   background: #fff;
   border-radius: 20rpx;
-  margin: 0 10vw;
+  margin: -140rpx 10vw 0;
   padding: 20rpx;
   box-shadow: 0 8px 12px #ebedf0;
 }
@@ -18,7 +18,7 @@
 
 .login-container form {
   width: 80vw;
-  margin: 30rpx 0 40rpx;
+  margin: 30rpx auto 40rpx;
   padding: 15rpx;
 }
 
@@ -29,11 +29,28 @@
   border-radius: 52rpx;
   height:72rpx;
   line-height:72rpx;
-  margin-bottom: 20rpx;
+  margin: 35rpx 0 20rpx;
 }
 
 .cu-form-group text{
   display: inline-block;
   height: 50rpx;
   margin-right: 15rpx;
+}
+
+.bg-cover{
+  background-image: url("https://cdn.pixabay.com/photo/2016/04/15/10/23/grindelwald-1330662_1280.jpg");
+  width: 100vw;
+  height: 66vw;
+  background-size: cover;
+}
+
+.prompt-message{
+  margin: 40rpx 10vw;
+  text-align: center;
+}
+
+.prompt-message text{
+  font-size: 24rpx;
+  color: rgb(158, 158, 158);
 }

@@ -1,10 +1,11 @@
-<!-- header -->
-<view class="cu-custom" style="height:{{CustomBar}}px;"></view>
+<!-- background  -->
+<view class='bg-cover' style='background-image: url("{{bgCoverUrl}}")'>
+</view>
 
-<!-- input -->
+<!-- Login Form -->
 <view class='login-container'>
-  <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4250885442,2652050609&fm=26&gp=0.jpg'></image>
-  <form>
+  <image src="{{iconUrl}}"></image>
+  <form bindsubmit='login'>
     <view class="cu-form-group">
       <text class='icon-people text-brown'></text>
       <input placeholder="请输入用户名" class='radius' name='username'></input>
@@ -12,9 +13,18 @@
 
     <view class="cu-form-group">
       <text class='icon-lock text-brown'></text>
-      <input placeholder="请输入密码" class='radius' name='password'></input>
+      <input placeholder="请输入密码" class='radius' name='password' type='password'></input>
     </view>
+
+    <button form-type='submit'
+    class="login-btn" role="button" 
+    aria-label="" aria-disabled="false">登 录</button>
   </form>
 
-  <button class="login-btn" role="button" aria-label="" aria-disabled="false">登 录</button>
+  
 </view>
+
+<!-- Prompt Message -->
+<view class='prompt-message'>
+  <text>使用 Github 账号进行登录</text>
+</view> 
