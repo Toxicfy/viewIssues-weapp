@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "v-music": "/components/music/index"
+    "v-music": "/components/music/index",
+    "v-nav":"/components/nav/index"
   }
 }

@@ -1,4 +1,7 @@
-<!-- header -->
-<view class="cu-custom" style="height:{{CustomBar}}px;"></view>
-
-<v-music album_title="{{musicData.album_title}}" author="{{musicData.author}}" img="{{musicData.pic_big}}"/>
+<view class="container">
+    <!-- header -->
+    <view class="cu-custom" style="height:{{CustomBar}}px;"></view>
+    <view class='header'></view>
+    <v-music song_info="{{musicData[3]}}" img="{{musicData.pic_big}}" class='music' />
+    <v-nav title="{{musicData[3].title}}" class='nav' />
+</view>

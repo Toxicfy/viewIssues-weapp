@@ -10,7 +10,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 20rpx;
+  padding: 40rpx;
   margin-bottom: 3vh;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .bg {
-  width: 60vw;
-  height: 60vw;
+  width: 50vw;
+  height: 50vw;
   border-radius: 50%;
 }

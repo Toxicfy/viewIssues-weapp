@@ -1,4 +1,3 @@
-const request = require('./utils/api');
 const Towxml = require('/towxml/main'); //引入towxml库
 
 //app.js
@@ -7,7 +6,6 @@ App({
 
     onLaunch: function() {
         this.getSystemInfo(); // 获取系统信息
-        this.getUserInfo(); // 获取当前登陆用户的基本信息
     },
 
     // 全局
@@ -26,11 +24,4 @@ App({
             }
         });
     },
-
-    // 获取当前登陆用户的基本信息
-    getUserInfo() {
-        request.get('/user').then(res => {
-            this.globalData.userInfo = res;
-        });
-    }
 });
