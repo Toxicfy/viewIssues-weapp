@@ -10,6 +10,7 @@ Page({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     musicData: [],
+    ipInfo: ''
   },
 
   /**
@@ -28,6 +29,16 @@ Page({
       }
     });
 
+    wx.request({
+      url: 'https://www.mxnzp.com/api/ip/self',
+      success: (res) => {
+        if (res.data.code === 1) {
+          this.setData({
+            ipInfo: res.data.data
+          })
+        }
+      }
+    })
   },
   // 监听页面初次渲染完成
   onReady: function() {},

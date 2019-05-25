@@ -1,7 +1,13 @@
 <view class="container">
-    <!-- header -->
-    <view class="cu-custom" style="height:{{CustomBar}}px;"></view>
-    <view class='header'></view>
-    <v-music song_info="{{musicData[3]}}" img="{{musicData.pic_big}}" class='music' />
-    <v-nav title="{{musicData[3].title}}" class='nav' />
+  <!-- header -->
+  <view class="cu-custom" style="height:{{CustomBar}}px;"></view>
+  <view class='header'>
+    <text class='location'>🏠 : {{ipInfo.province}}-{{ipInfo.city}}</text>
+    <view class='desc'>
+      <text class='icon'></text>
+      <text class='desc-text'>基于 IP 地址 ( {{ipInfo.ip}} ) </text>
+    </view>
+  </view>
+  <v-music song_info="{{musicData[3]}}" img="{{musicData.pic_big}}" class='music' />
+  <v-nav title="{{musicData[3].title}}" class='nav' />
 </view>
