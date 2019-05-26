@@ -10,16 +10,56 @@ Page({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     musicData: [],
-    ipInfo: ''
+    ipInfo: '',
+    currentMusicIndex: 4,
+    isFirst: false,
+    isLast: false,
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
+  // 切换上一曲
+  onPrevious: function() {
+    if (this.data.currentMusicIndex > 0) {
+      this.setData({
+        currentMusicIndex: this.data.currentMusicIndex - 1,
+        isLast: false
+      }, () => {
+        if (this.data.currentMusicIndex === 0) {
+          this.setData({
+            isFirst: true
+          })
+        }
+      })
 
+    }
+  },
+
+  // 切换下一曲
+  onNext: function() {
+
+    if (this.data.currentMusicIndex < (this.data.musicData.length - 1)) {
+      this.setData({
+        currentMusicIndex: this.data.currentMusicIndex + 1,
+        isFirst: false
+      }, () => {
+        if (this.data.currentMusicIndex === (this.data.musicData.length - 1)){
+          this.setData({
+            isLast: true
+          })
+        }
+      })
+    }
+  },
+
+  //  页面加载
+  onLoad: function(options) {
+    this.getMusicList();
+    this.getIp();
+  },
+
+  // 获取音乐列表
+  getMusicList: function() {
     wx.request({
-      url: 'https://www.mxnzp.com/api//music/recommend/list',
+      url: 'https://www.mxnzp.com/api/music/recommend/list',
       success: res => {
         if (res.data.code === 1) {
           this.setData({
@@ -28,7 +68,10 @@ Page({
         }
       }
     });
+  },
 
+  // 获取IP相关信息
+  getIp: function() {
     wx.request({
       url: 'https://www.mxnzp.com/api/ip/self',
       success: (res) => {
@@ -40,6 +83,7 @@ Page({
       }
     })
   },
+
   // 监听页面初次渲染完成
   onReady: function() {},
   // 监听页面显示

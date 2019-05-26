@@ -8,6 +8,6 @@
       <text class='desc-text'>基于 IP 地址 ( {{ipInfo.ip}} ) </text>
     </view>
   </view>
-  <v-music song_info="{{musicData[3]}}" img="{{musicData.pic_big}}" class='music' />
-  <v-nav title="{{musicData[3].title}}" class='nav' />
+  <v-music wx:if="{{musicData.length !== 0}}" song_info="{{musicData[currentMusicIndex]}}" img="{{musicData.pic_big}}" class='music' />
+  <v-nav first="{{isFirst}}" latest="{{isLast}}" title="{{musicData[currentMusicIndex].title}}" class='nav' catch:left="onPrevious" catch:right="onNext" />
 </view>
