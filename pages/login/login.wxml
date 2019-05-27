@@ -1,30 +1,31 @@
-<!-- background  -->
-<view class='bg-cover' style='background-image: url("{{bgCoverUrl}}")'>
-</view>
-
+<!-- background -->
+<view class='bg-cover' style='background-image: url("{{bgCoverUrl}}")'></view>
 <!-- Login Form -->
 <view class='login-container'>
   <image src="{{iconUrl}}"></image>
   <form bindsubmit='login'>
     <view class="cu-form-group">
       <text class='icon-people text-brown'></text>
-      <input placeholder="请输入用户名" class='radius' name='username'></input>
+      <input placeholder="请输入用户名" class='radius' name='username' bindblur='getRepository'></input>
     </view>
-
     <view class="cu-form-group">
       <text class='icon-lock text-brown'></text>
       <input placeholder="请输入密码" class='radius' name='password' type='password'></input>
     </view>
-
-    <button form-type='submit'
-    class="login-btn" role="button" 
-    aria-label="" aria-disabled="false">登 录</button>
+    <!--  -->
+    <view class="cu-form-group">
+      <text class='icon-shop text-brown'></text>
+      <picker bindchange="repositoryChange" value="{{index}}" range="{{repositoryList}}">
+        <view class="picker">{{repositoryList[repositoryIndex]}}</view>
+      </picker>
+    </view>
+    <!--  -->
+    <button form-type='submit' class="login-btn" role="button" aria-label="" aria-disabled="false">
+      登 录
+    </button>
   </form>
-
-  
 </view>
-
 <!-- Prompt Message -->
 <view class='prompt-message'>
   <text>使用 Github 账号进行登录</text>
-</view> 
+</view>

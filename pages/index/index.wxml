@@ -25,9 +25,9 @@
         </view>
         <!-- 标题 -->
         <view class='text-cut padding-right margin-bottom margin-top article-title'>
-         
-          <text bindtap="viewDetail" data-number='{{item.number}}'> {{item.title}}</text>
+          <text bindtap="getViewDetail" data-number='{{item.number}}'> {{item.title}}</text>
         </view>
+
         <!-- 标签  -->
         <view class="label">
           <!-- label -->
@@ -40,6 +40,7 @@
             <view class="cu-tag" style='background: #{{ele.color}};color: #fff;'>{{ele.name}}</view>
           </view>
         </view>
+
       </view>
     </view>
   </view>
