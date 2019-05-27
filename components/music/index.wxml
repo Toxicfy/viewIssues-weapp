@@ -1,7 +1,7 @@
 <view class='container'>
   <view class='bgContainer'>
     <image class='bg' src='{{song_info.pic_premium}}'></image>
-    <image class='play' src='{{playSrc}}'></image>
+    <image class='play' src='{{isPlay ? playSrc : pauseSrc }}' bindtap='play'></image>
   </view>
   <text>{{song_info.author}}</text>
 </view>
