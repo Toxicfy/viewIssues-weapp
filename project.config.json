@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.2",
+	"libVersion": "2.7.0",
 	"appid": "wxeb1c269c01cd276c",
 	"projectname": "GitBlog",
 	"debugOptions": {

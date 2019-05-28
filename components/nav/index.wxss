@@ -16,6 +16,9 @@
 
 .title {
   font-size: 28rpx;
+  width: 60vw;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-
-

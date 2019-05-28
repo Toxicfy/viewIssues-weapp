@@ -19,7 +19,11 @@ Page({
   },
   // 验证是否登录
   verifyLogin() {
-    let isLogin = !!wx.getStorageInfoSync("Authorization").keys.length;
+    let isLogin =
+      !!wx.getStorageSync("Authorization") &&
+      !!wx.getStorageSync("username") &&
+      !!wx.getStorageSync("selectedRepository");
+
     if (isLogin) {
       wx.switchTab({
         url: "/pages/index/index"

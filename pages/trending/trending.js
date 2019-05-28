@@ -2,7 +2,6 @@
 const app = getApp();
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -10,43 +9,47 @@ Page({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     musicData: [],
-    ipInfo: '',
-    currentMusicIndex: 4,
-    isFirst: false,
-    isLast: false,
+    ipInfo: "",
+    currentMusicIndex: 0,
+    isFirst: true,
+    isLast: false
   },
 
   // 切换上一曲
   onPrevious: function() {
     if (this.data.currentMusicIndex > 0) {
-      this.setData({
-        currentMusicIndex: this.data.currentMusicIndex - 1,
-        isLast: false
-      }, () => {
-        if (this.data.currentMusicIndex === 0) {
-          this.setData({
-            isFirst: true
-          })
+      this.setData(
+        {
+          currentMusicIndex: this.data.currentMusicIndex - 1,
+          isLast: false
+        },
+        () => {
+          if (this.data.currentMusicIndex === 0) {
+            this.setData({
+              isFirst: true
+            });
+          }
         }
-      })
-
+      );
     }
   },
 
   // 切换下一曲
   onNext: function() {
-
-    if (this.data.currentMusicIndex < (this.data.musicData.length - 1)) {
-      this.setData({
-        currentMusicIndex: this.data.currentMusicIndex + 1,
-        isFirst: false
-      }, () => {
-        if (this.data.currentMusicIndex === (this.data.musicData.length - 1)){
-          this.setData({
-            isLast: true
-          })
+    if (this.data.currentMusicIndex < this.data.musicData.length - 1) {
+      this.setData(
+        {
+          currentMusicIndex: this.data.currentMusicIndex + 1,
+          isFirst: false
+        },
+        () => {
+          if (this.data.currentMusicIndex === this.data.musicData.length - 1) {
+            this.setData({
+              isLast: true
+            });
+          }
         }
-      })
+      );
     }
   },
 
@@ -58,13 +61,14 @@ Page({
 
   // 获取音乐列表
   getMusicList: function() {
+    wx.showLoading({ title: "加载中" });
     wx.request({
-      url: 'https://www.mxnzp.com/api/music/recommend/list',
+      url: "https://www.mxnzp.com/api/music/recommend/list",
       success: res => {
         if (res.data.code === 1) {
-          this.setData({
-            musicData: res.data.data
-          })
+          this.setData({ musicData: res.data.data }, () => {
+            wx.hideLoading();
+          });
         }
       }
     });
@@ -73,15 +77,15 @@ Page({
   // 获取IP相关信息
   getIp: function() {
     wx.request({
-      url: 'https://www.mxnzp.com/api/ip/self',
-      success: (res) => {
+      url: "https://www.mxnzp.com/api/ip/self",
+      success: res => {
         if (res.data.code === 1) {
           this.setData({
             ipInfo: res.data.data
-          })
+          });
         }
       }
-    })
+    });
   },
 
   // 监听页面初次渲染完成
@@ -98,4 +102,4 @@ Page({
   onReachBottom: function() {},
   // 用户点击右上角分享
   onShareAppMessage: function() {}
-})
+});

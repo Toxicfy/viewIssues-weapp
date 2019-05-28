@@ -17,7 +17,7 @@
 }
 
 .login-container form {
-  width: 80vw;
+  width: 75vw;
   margin: 30rpx auto 40rpx;
   padding: 15rpx;
 }
