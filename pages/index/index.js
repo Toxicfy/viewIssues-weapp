@@ -1,4 +1,4 @@
-          //index.js
+//index.js
 const app = getApp();
 const request = require("../../utils/api");
 const utils = require("../../utils/util");
@@ -25,7 +25,7 @@ Page({
     const selectedRepository = wx.getStorageSync("selectedRepository");
     const issuesUrl = `/repos/${username}/${selectedRepository}/issues`;
 
-    request.get(issuesUrl, { per_page: 10, page: 1 }).then(articleInfo => {
+    request.get(issuesUrl, { per_page: 30, page: 1 }).then(articleInfo => {
       articleInfo.forEach(ele => {
         ele.created_at = utils.formatTime(new Date(ele.created_at));
       });
@@ -45,5 +45,13 @@ Page({
     wx.navigateTo({
       url: `../details/details?number=${e.currentTarget.dataset.number}`
     });
+  },
+
+  // 下拉更新数据
+  onPullDownRefresh() {
+    wx.showLoading({
+      title: "刷新中"
+    });
+    this.getIssues(); //再次获取 issues 数据
   }
 });

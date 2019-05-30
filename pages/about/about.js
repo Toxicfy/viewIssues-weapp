@@ -20,6 +20,9 @@ Page({
   },
 
   onLoad() {
+    wx.showLoading({
+      title: "加载中"
+    });
     //获取当前登陆用户的基本信息
     this.setData({
       userInfo: app.globalData.userInfo
@@ -52,11 +55,9 @@ Page({
         for (let i in resultObj) {
           attentionList.push(resultObj[i]);
         }
-        attentionList.sort((a, b) => {
-          return b.times - a.times;
-        });
-        this.setData({
-          attentionList
+        attentionList.sort((a, b) => b.times - a.times);
+        this.setData({ attentionList }, () => {
+          wx.hideLoading();
         });
       });
   }
