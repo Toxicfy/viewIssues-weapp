@@ -8,7 +8,8 @@ Page({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     userInfo: app.globalData.userInfo,
-    articleInfo: ""
+    articleInfo: "",
+    showMessage: false
   },
 
   // 页面加载触发
@@ -30,6 +31,16 @@ Page({
         ele.created_at = utils.formatTime(new Date(ele.created_at));
       });
 
+      if (articleInfo.length === 0) {
+        this.setData({
+          showMessage: true
+        });
+      } else {
+        this.setData({
+          showMessage: false
+        });
+      }
+
       this.setData({
         articleInfo,
         userInfo: app.globalData.userInfo
@@ -41,7 +52,6 @@ Page({
 
   // 获取单个 issues 详情
   getViewDetail(e) {
-    console.log(e.currentTarget.dataset.number);
     wx.navigateTo({
       url: `../details/details?number=${e.currentTarget.dataset.number}`
     });

@@ -60,5 +60,27 @@ Page({
           wx.hideLoading();
         });
       });
+  },
+
+  // 退出登录功能
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    });
+  },
+  // 关闭 modal
+  hideModal() {
+    this.setData({
+      modalName: null
+    });
+  },
+
+  // exit
+  exit() {
+    this.hideModal();
+    wx.clearStorageSync();
+    wx.reLaunch({
+      url: "/pages/login/login"
+    });
   }
 });

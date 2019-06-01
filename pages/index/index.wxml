@@ -44,4 +44,8 @@
       </view>
     </view>
   </view>
+
+  <view wx:if="{{showMessage}}" class="msg-container">
+    <text> -- 抱歉，该仓库暂无 issues 数据！ --</text>
+  </view>
 </view>

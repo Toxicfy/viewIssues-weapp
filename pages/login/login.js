@@ -114,8 +114,8 @@ Page({
       duration: 2000
     });
     wx.removeStorageSync("Authorization");
-    wx.setStorageSync("username");
-    wx.setStorageSync("selectedRepository");
+    wx.removeStorageSync("username");
+    wx.removeStorageSync("selectedRepository");
   },
 
   // 生命周期函数--监听页面加载

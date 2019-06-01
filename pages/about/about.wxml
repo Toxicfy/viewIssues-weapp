@@ -5,7 +5,7 @@
 <view class="user-card padding bg-white shadow-lg">
   <!-- 用户概要 -->
   <view class="user-info-container">
-    <view class="user-info-avatar" style="background-image:url({{userInfo.avatar_url}});"></view>
+    <view class="user-info-avatar" bindlongpress='showModal' data-target='exitModal' style="background-image:url({{userInfo.avatar_url}});"></view>
     <view class="user-info-text">
       <view class="user-info-name">{{userInfo.name}}</view>
       <view class="user-info-location">{{userInfo.location}}</view>
@@ -60,5 +60,20 @@
 
   <view class='chart-container'>
     <view class='chart' style='background-image: url("{{chart.url}}")'></view>
+  </view>
+</view>
+
+<!-- exit model -->
+<view class="cu-modal {{modalName=='exitModal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class='padding'>
+      是否确定退出？
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class='action'> 
+        <button class='cu-btn line-olive text-olive ' bindtap='hideModal'>取消</button>
+        <button class='cu-btn bg-olive margin-left' bindtap='exit'>确定</button>
+      </view>
+    </view>
   </view>
 </view>

@@ -9,7 +9,6 @@ page {
   background-size: cover;
 }
 
-
 /*  用户卡片 */
 .user-card {
   margin: -7vh 5vw 0;
@@ -29,7 +28,8 @@ page {
   margin: -5vh 5vw 1vh;
 }
 
-.user-info-text .user-info-location, .user-info-text .user-info-name {
+.user-info-text .user-info-location,
+.user-info-text .user-info-name {
   letter-spacing: 2rpx;
 }
 
@@ -125,7 +125,7 @@ page {
   font-size: 26rpx;
 }
 
-.attention-container .attention-item .attention-details  .name {
+.attention-container .attention-item .attention-details .name {
   margin: 11.5vh 0 1vh 1vw;
 }
 
@@ -175,4 +175,16 @@ page {
   background-repeat: no-repeat;
   width: 175.5vw;
   height: 26vw;
+}
+
+.cu-dialog {
+  width: 500rpx;
+}
+
+.cu-dialog .padding {
+  background: #ffffff;
+}
+
+.cu-dialog .cu-btn{
+  font-size: 22rpx;
 }

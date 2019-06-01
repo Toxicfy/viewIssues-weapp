@@ -50,3 +50,15 @@ Page {
   width: 100%;
   font-weight: 700;
 }
+
+/*  */
+
+.msg-container {
+  text-align: center;
+  margin-top: 10vh;
+  color: rgb(190, 179, 179);
+}
+
+.msg-container text {
+  font-size: 25rpx;
+}
